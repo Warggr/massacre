@@ -5,6 +5,11 @@
   <title>{% block title %}Massacre{% endblock %}</title>
 </head>
 <body>
+  <header>
+    <h2>Massacre</h2>
+    <a href="{% url 'all_teams' %}">Teams</a>
+    <a href="{% url 'all_users' %}">Users</a>
+  </header>
   <main>
     {% block content %}
     {% endblock %}

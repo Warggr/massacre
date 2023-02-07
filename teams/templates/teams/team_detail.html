@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Team {{ object.name }}{% endblock %}
+
+{% block content %}
+<h1>{{ object.name }}</h1>
+
+<h2>Admins</h2>
+{% for user in users.admin %}
+	{% include 'user-small.html' with object=user %}
+{% endfor %}
+
+<h2>Members</h2>
+{% for user in users.member %}
+	{% include 'user-small.html' with object=user %}
+{% endfor %}
+
+<h2>Interested</h2>
+{% for user in users.interested %}
+	{% include 'user-small.html' with object=user %}
+{% endfor %}
+
+<h2>Invited</h2>
+{% for user in users.offered %}
+	{% include 'user-small.html' with object=user %}
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %}Users{% endblock %}
+
+{% block content %}
+	{% for object in object_list %}
+		{% include 'user-small.html' %}
+	{% endfor %}
+{% endblock %}

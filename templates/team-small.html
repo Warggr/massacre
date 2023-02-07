@@ -1,0 +1,6 @@
+<div class="team small">
+	<h3><a href="{{ object.get_absolute_url }}">{{ object.name }}</a></h3>
+	{% if object.status %}
+		<span>{{ object.status }}</span>
+	{% endif %}
+</div>

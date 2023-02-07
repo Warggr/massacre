@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %}Teams{% endblock %}
+
+{% block content %}
+	{% for object in object_list %}
+		{% include 'team-small.html' %}
+	{% endfor %}
+{% endblock %}
